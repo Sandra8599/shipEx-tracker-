@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="/style.css"/>
+<title>Track — ShipEx</title>
+</head>
+<body>
+  <header class="header"><div class="logo"><img src="/logo.png" alt="ShipEx" /><div>ShipEx</div></div></header>
+  <main class="container">
+    <h2>Track shipment</h2>
+    <div class="search-box">
+      <input id="trackingField" class="input" placeholder="Enter tracking number" />
+      <button id="goTrack" class="btn">Lookup</button>
+    </div>
+    <div id="trackingCard" class="track-result small" style="display:none"></div>
+
+    <div id="map" style="height:320px;margin-top:20px;background:#eef"></div>
+
+    <div id="media" style="margin-top:18px"></div>
+  </main>
+  <script src="/app.js"></script>
+  <!-- Optional: load Google Maps script when you enable API -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_KEY"></script> -->
+</body>
+</html>
