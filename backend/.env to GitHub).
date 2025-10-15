@@ -1,0 +1,10 @@
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=supersecretjwtkey
+SMTP_HOST=smtp.sendgrid.net
+SMTP_PORT=587
+SMTP_USER=apikey_or_user
+SMTP_PASS=apikey_or_password
+FRONTEND_URL=https://your-frontend-url.com
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_key
+CLOUDINARY_API_SECRET=your_cloudinary_secret
