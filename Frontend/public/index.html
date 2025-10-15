@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ShipEx — Fast. Reliable. Smart</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="/logo.png" alt="ShipEx logo" />
+      <div>ShipEx</div>
+    </div>
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/track.html">Track</a> |
+      <a href="/ship.html">Ship</a> |
+      <a href="/login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Fast. Reliable. Smart Delivery</h1>
+        <p class="lead">Ship anywhere with ShipEx — modern logistics with real-time tracking.</p>
+
+        <div class="search-box">
+          <input id="trackingInput" class="input" placeholder="Enter tracking number e.g. SHPX123456" />
+          <button id="btnTrack" class="btn">Track</button>
+        </div>
+        <div id="trackResult" class="track-result small">Enter a tracking number and press Track (the input will be cleared after search).</div>
+      </div>
+
+      <div style="flex:0 0 360px">
+        <img src="/hero-illustration.png" alt="" style="width:100%;max-width:360px" />
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="card">
+        <h3>Express Delivery</h3>
+        <p class="small">Next-day & priority</p>
+      </div>
+      <div class="card">
+        <h3>International</h3>
+        <p class="small">Worldwide shipping</p>
+      </div>
+      <div class="card">
+        <h3>Local Courier</h3>
+        <p class="small">Same-day pickup</p>
+      </div>
+      <div class="card">
+        <h3>Freight & Pallets</h3>
+        <p class="small">Large shipments</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © ShipEx — All rights reserved
+  </footer>
+
+  <!-- Chatbot embed (optional) -->
+  <div id="chatbot-placeholder"></div>
+  <script src="/app.js"></script>
+  <script>/* load chatbot snippet if you use one */</script>
+</body>
+</html>
