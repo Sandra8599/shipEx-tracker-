@@ -1,35 +1,50 @@
 // models/Shipment.js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const ShipmentSchema = new mongoose.Schema({
-  tracking: { type: String, unique: true, required: true }, // SHPXxxxxxx
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
+const shipmentSchema = new mongoose.Schema({
+  trackingNumber: { type: String, required: true, unique: true },
   sender: {
     name: String,
-    phone: String,
     address: String,
-    country: String
+    phone: String,
+    email: String
   },
   receiver: {
     name: String,
-    phone: String,
     address: String,
-    country: String
+    phone: String,
+    email: String
   },
-  package: {
-    weightKg: Number,
-    size: { length: Number, width: Number, height: Number },
-    type: String, // e.g., "Box", "Envelope", "Pallet"
-    photos: [String], // cloudinary urls
-    videos: [String]  // cloudinary urls
+  packageDetails: {
+    weight: String,
+    dimensions: String,
+    type: String,
+    content: String,
+    fragile: Boolean,
+    value: Number, // for payment
   },
-  status: { type: String, default: 'Created' }, // Created, In Transit, Delivered, etc.
-  location: { lat: Number, lng: Number, name: String },
-  eta: String,
-  carrier: { type: String, default: 'ShipEx' },
-  notes: String,
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: Date
-});
+  payment: {
+    amount: Number,
+    currency: { type: String, default: "USD" },
+    paid: { type: Boolean, default: false },
+    method: String // e.g., PayPal, Card, Wallet
+  },
+  status: { type: String, default: "Pending" },
+  currentLocation: String,
+  destination: String,
+  estimatedDelivery: String,
+  history: [
+    {
+      date: String,
+      location: String,
+      note: String
+    }
+  ],
+  media: [String], // URLs (images/videos)
+  coordinates: {
+    lat: Number,
+    lng: Number
+  },
+}, { timestamps: true });
 
-module.exports = mongoose.model('Shipment', ShipmentSchema);
+module.exports = mongoose.model("Shipment", shipmentSchema);
