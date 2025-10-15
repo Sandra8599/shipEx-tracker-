@@ -1,1 +1,10 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&libraries=places"></script>
+<div class="tracking-info">
+  <h2>Tracking Number: SHPX123456</h2>
+  <p>Status: <span id="status">In Transit</span></p>
+  <p>From: Lagos Hub → To: Abuja</p>
+  <p>Estimated Delivery: Oct 20, 2025</p>
+  <p>Package: Electronics (12kg, 40x30x20cm)</p>
+  <p>Payment: $45 (Pending)</p>
+
+  <div id="map" style="height:300px;width:100%;"></div>
+</div>
